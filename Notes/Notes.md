@@ -206,3 +206,18 @@ It's a process in which when users visit a particular URL, they're navigated/ gu
 
 and this code is used to inherit/ extend that file.
 
+
+## Lecture 4
+
+*Topics*
+
+
+- Forms
+- CSRF (Cross-Site Request Forgery)
+- wtforms
+- Code Demo
+
+
+##### What are Forms (Web Forms) ?
+
+Forms are web pages where end-users can enter their data which can be sent to the backend server for processing
