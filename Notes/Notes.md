@@ -221,3 +221,59 @@ and this code is used to inherit/ extend that file.
 ##### What are Forms (Web Forms) ?
 
 Forms are web pages where end-users can enter their data which can be sent to the backend server for processing
+
+##### Why do we need Forms ?
+
+- Allows end-users to interact with webpages and websites
+- Enable data collection
+- Facilitates communication with end-users
+- Make for dynamic websites.
+
+##### Working of Web Forms :
+
+- Front-end design (HTML,CSS, JS)
+- User input captured from input field
+- Input data processed in the back-end
+- HTTP Request generated and sent to Server
+	- Get - *query parameters*
+	- Post - *store in database*
+- HTTP Response from Server
+- Response data parsed and displayed to Client accordingly
+
+
+#### What is CSRF attack ?
+
+- Cross Side Request Forgery
+- It's a type of an attack, where an attacker 'tricks' and end-user in performing some malicious/unintended action over a web application
+- Such attacks are common when web applications take inputs from users (ex: forms)
+
+##### Working of CSRF : 
+
+- An attacker creates a malicious website or an email
+- These websites/emails usually contain links that will generate a request to the web application
+- These requests are designed to perform some unintended actions over the application on behalf of the end-users.
+- Since the end-users would be authenticated, these 'unintended' actions would be perceived as 'genuine' by the web application and carried out.
+- These actions generally lead to leakage of sensitive data, transfer of funds, etc.
+
+##### Prevention of CSRF: *CSRF Tokens*
+
+- It's a long, random and unpredictable string generated at the server side
+- The token is shared with the end-user after authentication
+- Whenever 
+
+
+### WTForms
+
+WTForms is a flexible forms validation and rendering library for Python web development. It can work with whatever web framework and template engine you choose. It supports data validation, CSRF protection, internationalization (I18N), and more. There are various community libraries that provide closer integration with popular frameworks.
+
+
+#### Why use wtforms ?
+
+- Super convenient to create and handle forms
+- Help avoid manual input validation
+- Helps prevent CSRF attacks.
+- Complaint with 'pythonic' coding style
+	- Treat forms as python classes
+	- Work with forms as objects and attributes
+	- No need to write tedious HTML code (input, label, id tags, etc.)
+- Integrated with Flask (flask-wtf)
