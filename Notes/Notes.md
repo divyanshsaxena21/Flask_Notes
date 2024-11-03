@@ -277,3 +277,62 @@ WTForms is a flexible forms validation and rendering library for Python web deve
 	- Work with forms as objects and attributes
 	- No need to write tedious HTML code (input, label, id tags, etc.)
 - Integrated with Flask (flask-wtf)
+
+
+## Lecture 5
+
+*Topics*
+
+- About Databases
+- Types of Mappings
+- ORM (Object Relational Mapping)
+- SQL Alchemy and SQLite Database
+- Code Demo
+
+
+**What is a Database**
+
+- Database is a means of storing data in an organized manner.
+- Helps to store, process and manipulate large volumes of data rather conveniently.
+- Allows complex datasets to be stored as separate entities and establish relationships between each other for easy identification.
+- Most preferred method for storing application data in the server side in the backend.
+
+**Type of Databases :**
+
+On broad level
+
+- Relational Databases
+- Non-Relational Databases
+
+**What is ORM ?**
+
+- It's a tool that acts as an interface between an OOP language and a Relational Database.
+- Helps represent database tables in corresponding object-oriented formats in OOP language.
+- Allows accessing and manipulation of database tables just as we would objects in OOP language of choice.
+- Helps translate code written in OOP languages into SQL queries for data processing and vice versa.
+
+
+**Why use an ORM ?**
+
+- Provides abstraction from complex SQL queries
+- Seamless mapping between OOP language and Relational Database
+- Let's switch between different Databases quickly and effortlessly
+- Less code to write to perform operations
+- Helps overcome SQL Injection Attacks.
+
+
+##### **SQL Alchemy**
+
+Flask SQL Alchemy is an extension for Flask that adds support for SQL Alchemy to your application. It simplifies using SQL Alchemy with Flask by setting up common objects and patterns for using those objects, such as a session tied to each web request, models, and engines.
+
+- A Python-specific ORM tool.
+- Can be used to connect with any database.
+- Helps represent Database tables as Python classes
+- Helps work with rows and columns of a Database table as Class instances and attributes respectively in Python.
+
+##### **SQLite Database**
+
+- Server-less, lightweight database engine.
+- Written in C programming language
+- The database is stored as a file in the file system
+- Convenient for quick use and small-scale storage purposes.
