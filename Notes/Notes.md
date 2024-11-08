@@ -4,7 +4,7 @@
 Why make a Web App? 
 - For Exchange of Information
 
-	==*"Exchange of Information"* -How ?==
+	==*"Exchange of Information"* - How ?==
 	- Client - Server Architecture
 	- HTTP protocol
 
