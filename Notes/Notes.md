@@ -336,3 +336,16 @@ Flask SQL Alchemy is an extension for Flask that adds support for SQL Alchemy to
 - Written in C programming language
 - The database is stored as a file in the file system
 - Convenient for quick use and small-scale storage purposes.
+
+**Create Database and Insert**
+
+![[CREATE AND INSERT.png]]
+
+**READ from Database**
+
+![[READ_1.png]]
+
+**UPDATE and CLOSE CONNECTION**
+
+![[UPDATE.png]]
+
