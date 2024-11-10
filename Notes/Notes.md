@@ -279,7 +279,7 @@ WTForms is a flexible forms validation and rendering library for Python web deve
 - Integrated with Flask (flask-wtf)
 
 
-## Lecture 5
+## Lecture 5 (Part 1)
 
 *Topics*
 
@@ -349,3 +349,33 @@ Flask SQL Alchemy is an extension for Flask that adds support for SQL Alchemy to
 
 ![[UPDATE.png]]
 
+### Lecture-5 (Part 2)
+
+*Topics*
+- One to many
+- Many to Many
+
+
+- Establish a Foreign Key between two tables
+
+##### One to Many
+
+**Team and Player**
+
+![[Creating and Adding in Tables.png]]
+
+![[Basic Operations.png]]
+
+#### **The third table in Many to Many is called *==Association Table==***
+
+
+**Create tables and add rows**
+
+![[Pasted image 20241110211402.png]]
+
+![[Pasted image 20241110211441.png]]
+![[Pasted image 20241110211503.png]]
+
+**How the Many-to-Many Works**
+
+![[Pasted image 20241110211613.png]]
