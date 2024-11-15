@@ -379,3 +379,98 @@ Flask SQL Alchemy is an extension for Flask that adds support for SQL Alchemy to
 **How the Many-to-Many Works**
 
 ![[Pasted image 20241110211613.png]]
+
+
+### Lecture-6
+
+##### Sessions
+*Topics*
+
+- Definition
+- Working
+- Type of Sessions
+- Security Considerations
+- Code Demo
+
+**What is a Web Session ?**
+
+- A web session refers to the period of time an end user is active on a web application during a visit (until logout or session timeout)
+- Information about the interaction b/w the user and the application during each visit is usually stored at 
+	- Client side - *cookies (small chunks of data sent to application via server)*
+	- Server side - *database*
+- This helps the server and the browser maintain user preferences throughout the duration  of a particular visit to the website
+	- *User login status*
+	- *Items in online shopping cart*
+	- *Website layout/appearance preferences*
+
+
+**Working of Web Sessions**
+
+1. Client-Server Architecture
+2. HTTP Protocol
+3. Login Credentials Stored in Server
+4. IO Generated
+5. For every interaction request is generated
+6. Client-side session -> default in Flask
+7. Server-side session -> in flask using library
+
+**Types of Sessions**
+
+*Based on Duration:*
+
+1. Persistent Sessions:
+	1. These sessions remain active for a very long period of time
+	2. Ends only when the user manually terminates the session
+	3. Ex: Social media, OTT
+2. Non- persistent Session:
+	1. These sessions last for a very short period of time
+	2. Session ends when the application/browser is close
+
+*Based on Security Mechanism*
+
+1. Authenticated Sessions:
+	1. Sessions are created only after the user has been authenticated (via login credentials)
+2. Anonymous Sessions:
+	1. Sessions are created even if the user hasn't been authenticated
+	2. Useful for maintaining state information without authentication (as a 'Guest')
+	3. Ex: Amazon
+
+*Based on Storage Location*
+
+1. Client-Side
+	1. State information of the sessions is stored within the browser
+	2. Useful for storing, insensitive data
+	3. Ex: browser cookies
+2. Server-Side
+	1. State information of the sessions is stored in databases
+	2. Ideal for large volumes and sensitive data; Offer improved security and integrity.
+
+
+**Security Considerations**
+
+***Measures to enhance Security and Integrity of Sessions data getting stored***
+
+1. Session ID:
+	- The session ID should be long and randomly generated
+	- The session ID should be changed periodically during a session
+	- The session ID shouldn't be exposed as part of any URL.
+2. Secure Cookies:
+	- Set the flags *HTTP Only* and *Secure* and the attribute *SameSite* while setting cookies over HTTP.
+	- *HTTP Only* prevents client-side scripts (JavaScript) from accessing browser cookies, thus preventing XSS (cross-site scripting) attacks.
+	- Secure ensures that cookies are sent over the HTTPS domain, preventing interception over unsecured connections.
+	- *SameSite* helps chances of CSRF attacks.
+		- ==Set-Cookie: sessionId=abc123; HttpOnly:Secure; SameSite=Strict==
+3. Session Timeout:
+	- Can end session after a predefined period of inactivity.
+	- Can terminate sessions after a fixed duration, regardless of activity.
+	- Helps reduce the time window available for attackers.
+4. Logging and Monitoring:
+	- Maintain logs of session creation, access, terminates and various events to detect any unusual activity.
+	- Implement real-time monitoring systems to analyse logs and detect anomalies as occur.
+	- Use automated tools to generate alerts for suspicious activities, enabling product investigation and response.
+5. Additional Measures:
+	- Implement MFA (mutli-factor authentication) for security of session.
+	- Prompt users to confirm any and all critical actions within a session.
+	- Notify users before session timeout due to inactivity, if they want to extend a session.
+		This can improve user experience while maintaining security.
+
