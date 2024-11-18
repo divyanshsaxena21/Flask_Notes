@@ -585,3 +585,21 @@ Flask SQL Alchemy is an extension for Flask that adds support for SQL Alchemy to
 - Cookies are a part of sessions
 - Cookies are generated within a session
 - Similar security considerations will apply
+
+
+### Lecture - 8
+
+
+##### Learning Curves
+
+- A great tool for evaluating the performance of Machine Learning models
+- Act as a diagnostic tool and helps to identify if the model is under-fitting or over-fitting
+
+**Data is split into 3 parts**
+- *Train* -> train model
+- *Val* -> for evaluation
+- *Test* -> for reporting purposes
+
+Train Score
+Validation Score
+
